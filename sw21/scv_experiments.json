@@ -1,171 +1,119 @@
-[{
+{
+  "args": {
+    "retailers": [
+      {
+        "temperature": 3,
+        "id": 1,
+        "max_time_shelf":1
+      }
+    ],
+    "transporters": [
+      {
+        "leg": 1,
+        "temperature": 3,
+        "prob_temperature":0.9,
+        "id": 5,
+        "distance": 1200,
+        "source_id": 3,
+        "velocity": 60
+      },
+      {
+        "leg": 1,
+        "temperature": 3,
+        "prob_temperature":0.5,
+        "id": 6,
+        "distance": 1200,
+        "source_id": 4,
+        "velocity": 60
+      },
+      {
+        "leg": 2,
+        "temperature": 3,
+        "prob_temperature":0.9,
+        "id": 7,
+        "distance": 80,
+        "source_id": 2,
+        "velocity": 40
+      }
+    ],
+    "growers": [
+      {
+        "starting_stock": 20,
+        "temperature": 3,
+        "id": 3,
+        "default_storage_time": 2,
+        "min_shelf_life": 0,
+        "production_capacity": 12,
+        "production_std": 0
+      },
+      {
+        "starting_stock": 20,
+        "temperature": 3,
+        "id": 4,
+        "default_storage_time": 4,
+        "min_shelf_life": 0,
+        "production_capacity": 12,
+        "production_std": 1
+      }
+    ],
+    "distributors": [
+      {
+        "temperature": 3,
+        "id": 2,
+        "min_shelf_life": 0,
+        "processing_time":1
+      }
+    ]
+  }
+  ,
+    "params": {
+      "E_A": 15200,
+      "R_gas": 1,
+      "K_A": 1.55,
+      "shelf_life": 56,
+      "opt_temperature": 3,
+      "demand_mean":168,
+      "demand_std":1,
+      "order_period": 7
+    },
+    "n":500
+    ,
+"experiments":[
+  {
   "id": "ex1",
   "description": "Complete, timely, accurate",
-  "args": {
-    "retailers": [
-      {
-        "temperature": 3,
-        "id": 1,
-        "max_time_shelf":7
-      }
-    ],
-    "transporters": [
-      {
-        "leg": 1,
-        "temperature": 3,
-        "prob_temperature":0.9,
-        "id": 5,
-        "distance": 100,
-        "source_id": 3,
-        "velocity": 60
-      },
-      {
-        "leg": 1,
-        "temperature": 3,
-        "prob_temperature":0.7,
-        "id": 6,
-        "distance": 80,
-        "source_id": 4,
-        "velocity": 60
-      },
-      {
-        "leg": 2,
-        "temperature": 3,
-        "prob_temperature":0.9,
-        "id": 7,
-        "distance": 30,
-        "source_id": 2,
-        "velocity": 60
-      }
-    ],
-    "growers": [
-      {
-        "starting_stock": 20,
-        "info_delay": 0,
-        "temperature": 3,
+  "args":{
+    "growers":[
+        {
         "id": 3,
-        "default_storage_time": 1,
-        "min_shelf_life": 0,
-        "info_noise": 0,
-        "production_capacity": 12,
-        "production_std": 0
+        "info_delay": 0,
+        "info_noise": 0
       },
       {
-        "starting_stock": 20,
-        "info_delay": 0,
-        "temperature": 3,
-        "id": 4,
-        "default_storage_time": 2,
-        "min_shelf_life": 0,
-        "info_noise": 0,
-        "production_capacity": 12,
-        "production_std": 0
-      }
-    ],
-    "distributors": [
-      {
-        "temperature": 3,
-        "id": 2,
-        "min_shelf_life": 0,
-        "processing_time":2
-      }
+      "id": 4,
+      "info_delay": 0,
+      "info_noise": 0
+    }
     ]
+  }
   },
-  "params": {
-    "E_A": 15200,
-    "R_gas": 1,
-    "K_A": 1.55,
-    "shelf_life": 56,
-    "opt_temperature": 3,
-    "demand_mean":157,
-    "demand_std":0,
-    "order_period": 7
-  },
-  "n":302
-},
-{
+  {
   "id": "ex2",
   "description": "Incomplete, delayed, inaccurate",
-  "args": {
-    "retailers": [
-      {
-        "temperature": 3,
-        "id": 1,
-        "max_time_shelf":7
-      }
-    ],
-    "transporters": [
-      {
-        "leg": 1,
-        "temperature": 3,
-        "prob_temperature":0.9,
-        "id": 5,
-        "distance": 100,
-        "source_id": 3,
-        "velocity": 60
-      },
-      {
-        "leg": 1,
-        "temperature": 3,
-        "prob_temperature":0.7,
-        "id": 6,
-        "distance": 80,
-        "source_id": 4,
-        "velocity": 60
-      },
-      {
-        "leg": 2,
-        "temperature": 3,
-        "prob_temperature":0.9,
-        "id": 7,
-        "distance": 30,
-        "source_id": 2,
-        "velocity": 60
-      }
-    ],
-    "growers": [
-      {
-        "starting_stock": 20,
-        "info_delay": 2,
-        "temperature": 3,
+  "args":{
+    "growers":[
+        {
         "id": 3,
-        "default_storage_time": 1,
-        "min_shelf_life": 0,
-        "info_noise": 0.3,
-        "production_capacity": 12,
-        "production_std": 0
+        "info_delay": 9999999999,
+        "info_noise": 0.0
       },
       {
-        "starting_stock": 20,
-        "info_delay": 9999999999,
-        "temperature": 3,
-        "id": 4,
-        "default_storage_time": 2,
-        "min_shelf_life": 0,
-        "info_noise": 0.3,
-        "production_capacity": 12,
-        "production_std": 0
-      }
-    ],
-    "distributors": [
-      {
-        "temperature": 3,
-        "id": 2,
-        "min_shelf_life": 0,
-        "processing_time":2
-      }
+      "id": 4,
+      "info_delay": 1,
+      "info_noise": 0.02
+    }
     ]
-  },
-  "params": {
-    "E_A": 15200,
-    "R_gas": 1,
-    "K_A": 1.55,
-    "shelf_life": 56,
-    "opt_temperature": 3,
-    "demand_mean":157,
-    "demand_std":0,
-    "order_period": 7
-  },
-  "n":302
+  }
+  }
+]
 }
-  ]
